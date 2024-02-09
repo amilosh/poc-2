@@ -1,0 +1,48 @@
+# Gradle
+sender-service/.gradle
+sender-service/!gradle/wrapper/gradle-wrapper.jar
+receiver-service/.gradle
+receiver-service/!gradle/wrapper/gradle-wrapper.jar
+
+# IntelliJ IDEA
+sender-service/.idea
+sender-service/*.iws
+sender-service/*.iml
+sender-service/*.ipr
+sender-service/out/
+sender-service/!**/src/main/**/out/
+sender-service/!**/src/test/**/out/
+sender-service/bin/
+sender-service/!**/src/main/**/bin/
+sender-service/!**/src/test/**/bin/
+sender-service/build/
+sender-service/!**/src/main/**/build/
+sender-service/!**/src/test/**/build/
+receiver-service/.idea
+receiver-service/*.iws
+receiver-service/*.iml
+receiver-service/*.ipr
+receiver-service/out/
+receiver-service/!**/src/main/**/out/
+receiver-service/!**/src/test/**/out/
+receiver-service/bin/
+receiver-service/!**/src/main/**/bin/
+receiver-service/!**/src/test/**/bin/
+receiver-service/build/
+receiver-service/!**/src/main/**/build/
+receiver-service/!**/src/test/**/build/
+
+# Compiled class file
+*.class
+
+# Log file
+*.log
+
+# Package Files
+*.jar
+*.war
+*.nar
+*.ear
+*.zip
+*.tar.gz
+*.rar
