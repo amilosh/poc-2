@@ -6,6 +6,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import pl.amilosh.entity.GroceryItem;
+import pl.amilosh.repository.CustomGroceryItemRepository;
 import pl.amilosh.repository.GroceryItemRepository;
 
 @RestController
@@ -14,6 +15,7 @@ import pl.amilosh.repository.GroceryItemRepository;
 public class GroceryItemController {
 
     private final GroceryItemRepository groceryItemRepository;
+    private final CustomGroceryItemRepository customGroceryItemRepository;
 
     @GetMapping(value = "/create")
     public String create() {
@@ -71,10 +73,16 @@ public class GroceryItemController {
         return "Number of grocery items: " + count;
     }
 
-    @GetMapping(value = "/get-all")
+    @GetMapping(value = "/delete-all")
     public String deleteAll() {
         groceryItemRepository.deleteAll();
         return "All grocery items were deleted";
+    }
+
+    @GetMapping(value = "/update-quantity/{name}/{newQuantity}")
+    public String updateQuantity(@PathVariable("name") String name, @PathVariable("newQuantity") float newQuantity) {
+        customGroceryItemRepository.updateGroceryItemQuantity(name, newQuantity);
+        return "Grocery items was updated";
     }
 
     public String getItemDetails(GroceryItem item) {
