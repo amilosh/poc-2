@@ -6,6 +6,7 @@ Proof of concept project
 - Gradle 8.6
 - Spring Boot 3.2.2
 - RabbitMQ 3.12
+- MongoDB 6.0.13
 
 ## Run
 ```console
